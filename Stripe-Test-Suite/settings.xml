@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="00c9ccc7-12b9-4ce0-8905-be6471bcd11a" name="Stripe Test Suite">
+  <con:settings id="9c6aa2e2-c998-49d9-b1a8-6ef39aa97b89">
+    <con:setting id="00c9ccc7-12b9-4ce0-8905-be6471bcd11afileName">Stripe-Test-Suite</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

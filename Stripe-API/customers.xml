@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:con="http://eviware.com/soapui/config" name="customers" path="/v1/customers" id="0611ae5e-8959-43ef-a213-8d98bfd551ad">
+  <con:settings id="88c0a809-29ec-4abf-8d4f-a4991ee6f76d">
+    <con:setting id="0611ae5e-8959-43ef-a213-8d98bfd551adfileName">customers</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="9251b615-976d-4aff-b60b-9800aa91a4ce" method="DELETE">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="a9beb8a5-57c7-4f79-af26-6d1817d56ab1" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request/>
+      <con:originalUri>https://api.stripe.com/v1/customers/123</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="869df07d-5a7e-4544-b48b-385b34bbbd9c">
+          <con:authProfile>Stripe Basic Auth</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+  <con:method name="Method 2" id="326aaf10-e398-433e-a9ad-655548bf9304" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>name</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>description</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Request 1" id="22667d30-7f01-4c1d-9455-e166c0c37a2d" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request/>
+      <con:originalUri>https://api.stripe.com/v1/customers</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="name" value="Manasa from Ready API 142223"/>
+        <con:entry key="description" value="this is a test customer created from Ready API"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>name</con:entry>
+        <con:entry>description</con:entry>
+      </con:parameterOrder>
+      <con:environmentSpec>
+        <con:entry environmentId="869df07d-5a7e-4544-b48b-385b34bbbd9c">
+          <con:authProfile>stripe bearer</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+  <con:method name="Method 3" id="ede904fc-f699-4b7d-af95-c44e0e498def" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="f1e4671f-2220-457d-87e9-a64184903d6f" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request/>
+      <con:originalUri>https://api.stripe.com/customers</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="869df07d-5a7e-4544-b48b-385b34bbbd9c">
+          <con:authProfile>Stripe Basic Auth</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

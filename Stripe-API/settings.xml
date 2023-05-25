@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RestService" id="037e32a3-38c7-45ec-aa5e-81bc3ac1de4a" name="Stripe API" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification">
+  <con:settings id="eed82445-135f-42ce-b8bf-1aa8eda9452a">
+    <con:setting id="037e32a3-38c7-45ec-aa5e-81bc3ac1de4afileName">Stripe-API</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="Stripe API.json">
+    <con:part>
+      <con:url>Stripe API.json</con:url>
+      <con:content>{"openapi":"3.0.1","info":{"title":"Stripe API","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/v1/balance_transactions":{"get":{"responses":{"default":{"description":"Default response"}}}},"/v1/charges":{"get":{"responses":{"default":{"description":"Default response"}}},"post":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/v1/balance":{"get":{"responses":{"default":{"description":"Default response"}}}},"/v1/customers":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}},"post":{"description":"","parameters":[{"name":"name","in":"query","required":true,"schema":{"type":"string","example":null}},{"name":"description","in":"query","required":true,"schema":{"type":"string","example":null}}],"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}},"delete":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints/>
+  <con:environmentSpec>
+    <con:entry environmentId="869df07d-5a7e-4544-b48b-385b34bbbd9c">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>

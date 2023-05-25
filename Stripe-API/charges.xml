@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:con="http://eviware.com/soapui/config" name="charges" path="/v1/charges" id="a9d93335-3728-44ef-a4ff-4a7177fa5074">
+  <con:settings id="589b0571-0783-477e-add8-675a34d162fc">
+    <con:setting id="a9d93335-3728-44ef-a4ff-4a7177fa5074fileName">charges</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="47dd406d-8375-4d94-9a4c-aff7076a1a70" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>amount</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>currency</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>source</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>description</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Request 1" id="c950fbf6-1418-4f70-8c06-c6386f024e9e" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request/>
+      <con:originalUri>https://api.stripe.com/v1/charges</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="amount" value="2000"/>
+        <con:entry key="description" value="my first charge created from ready api"/>
+        <con:entry key="currency" value="usd"/>
+        <con:entry key="source" value="tok_amex"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>amount</con:entry>
+        <con:entry>currency</con:entry>
+        <con:entry>source</con:entry>
+        <con:entry>description</con:entry>
+      </con:parameterOrder>
+      <con:environmentSpec>
+        <con:entry environmentId="869df07d-5a7e-4544-b48b-385b34bbbd9c">
+          <con:authProfile>Stripe Basic Auth</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+  <con:method name="Method 2" id="0c7035b2-0abe-44b7-8b0c-2687fd505566" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="66b74d08-a82b-4a96-afb5-72dcdb3aace4" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request/>
+      <con:originalUri>https://api.stripe.com/v1/charges</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="869df07d-5a7e-4544-b48b-385b34bbbd9c">
+          <con:authProfile>Stripe Basic Auth</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="5aadb396-fea1-4ab1-b3a0-d8a44d849faf" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="LoadUI Single Request Test Case 1" searchProperties="true" timeout="0">
+  <con:settings id="4d34b3ae-1745-4fbe-b2a3-d1a96f23e87d">
+    <con:setting id="5aadb396-fea1-4ab1-b3a0-d8a44d849faffileName">LoadUI-Single-Request-Test-Case-1</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="90c288c5-0f55-4327-b907-cd9c77b7f80e">
+    <con:settings/>
+    <con:config service="Stripe API" resourcePath="/v1/balance" methodName="Get All Balances" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Request 1" id="d2ad470b-4bb1-4e9b-9272-addcd8d1ef32" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://api.stripe.com/v1/balance</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+        <con:environmentSpec>
+          <con:entry environmentId="869df07d-5a7e-4544-b48b-385b34bbbd9c">
+            <con:authProfile>Stripe Basic Auth</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

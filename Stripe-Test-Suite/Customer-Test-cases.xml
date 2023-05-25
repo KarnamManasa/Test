@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="08011c2d-2634-4f95-ac74-ac4e13674938" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Customer Test cases" searchProperties="true" timeout="0">
+  <con:settings id="f8854f7e-8e85-47cf-9320-e3dcddeb3ad6">
+    <con:setting id="08011c2d-2634-4f95-ac74-ac4e13674938fileName">Customer-Test-cases</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="41e5ddb3-f5cb-45d1-aaae-5cc116bb9ea8">
+    <con:settings/>
+    <con:config service="Stripe API" methodName="Method 2" resourcePath="/v1/customers" xsi:type="con:RestRequestStep">
+      <con:restRequest name="REST Request" id="288da367-d81e-461d-a364-f5f97cd201bf" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:request/>
+        <con:originalUri>https://api.stripe.com/v1/customers/123</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes 2" id="a1a705c9-e20a-4086-a2fa-cea0aaafd65d">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Simple Contains" id="7a5713c6-e6d6-4309-bbec-4687fe26482a" name="Contains">
+          <con:configuration>
+            <token>mk</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Simple Contains" id="b83e6f2c-69e4-4f45-8769-f9994b78ae3b" name="Contains 2">
+          <con:configuration>
+            <token>invoice_prefix</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="869df07d-5a7e-4544-b48b-385b34bbbd9c">
+            <con:authProfile>Inherit From Service</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request 2" id="4f7a2c36-d5a5-4c28-8812-cbd757c8913d">
+    <con:settings/>
+    <con:config service="Stripe API" resourcePath="/v1/customers" methodName="Method 2" xsi:type="con:RestRequestStep">
+      <con:restRequest name="REST Request 2" id="22667d30-7f01-4c1d-9455-e166c0c37a2d" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://api.stripe.com/v1/customers</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes 2" id="06133064-ac0e-4a77-9135-6cc63b7c303b">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="name" value="Manasa from Ready API"/>
+          <con:entry key="description" value="this is a test customer created from Ready API"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>description</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="869df07d-5a7e-4544-b48b-385b34bbbd9c">
+            <con:authProfile>Inherit From Service</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request 3" id="502536a0-9474-497e-85db-84d383bd90ff">
+    <con:settings/>
+    <con:config service="Stripe API" resourcePath="/v1/customers" methodName="Method 3" xsi:type="con:RestRequestStep">
+      <con:restRequest name="REST Request 3" id="f1e4671f-2220-457d-87e9-a64184903d6f" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://api.stripe.com/customers</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes 2" id="67a3be50-a1fe-46dd-933f-4608f7c7c4de">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="869df07d-5a7e-4544-b48b-385b34bbbd9c">
+            <con:authProfile>Inherit From Service</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:con="http://eviware.com/soapui/config" name="balance_transactions" path="/v1/balance_transactions" id="c91ed292-96d2-4153-b490-4aec71c4c98c">
+  <con:settings id="d43600f5-2f9e-4956-bb46-602afd6f3f64">
+    <con:setting id="c91ed292-96d2-4153-b490-4aec71c4c98cfileName">balance_transactions</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Get balance transactions" id="1a37c7d7-161e-44ae-9fba-b7e87df808da" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="5e55ba21-a1b7-467f-a0f5-5cd2a3511135" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request/>
+      <con:originalUri>https://api.stripe.com/v1/balance_transactions</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="869df07d-5a7e-4544-b48b-385b34bbbd9c">
+          <con:authProfile>Stripe Basic Auth</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>
